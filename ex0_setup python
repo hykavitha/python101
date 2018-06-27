@@ -1,0 +1,15 @@
+EX0
+Windows 
+Go to http://notepad-plus-plus.org with your browser, get the Notepad++ text editor, and install it. You do not need to be the administrator to do this.  
+1.	Make sure you can get to Notepad++ easily by putting it on your desktop and/or in Quick Launch. Both options are available during setup.  
+2.	Run PowerShell from the Start menu. Search for it and you can just hit Enter to run it.  
+3.	Make a shortcut to it on your desktop and/or Quick Launch for your convenience.  
+4.	Run your Terminal program. It won’t look like much.  
+5.	In your Terminal program, run python. You run things in Terminal by just typing the name and hitting Enter. 
+6.	If you run python and it’s not there (python is not recognized.), install it from  http://python.org/download.  
+7.	Make sure you install Python 3.  
+8.	You may be better off with Active State Python, especially if you do not have administrative rights.  
+9.	If after you install it python still isn’t recognized, then in PowerShell enter this:  
+a.	[Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Python27", "User")  
+b.	Close PowerShell and then start it again to make sure Python now runs. If it doesn’t, restart may be required. 
+10.	Type quit() and hit Enter to exit python.  
