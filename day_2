@@ -1,9 +1,14 @@
 EX_01
 HW 
 1.	You should be back at a prompt similar to what you had before you typed python. If not,  find out why.  
-2.	Learn how to make a directory in the Terminal.  
-3.	Learn how to change into a directory in the Terminal.  
-4.	Use your editor to create a file in this directory. Make the file, Save or Save As... and pick this directory.  
+2.	Learn how to make a directory in the Terminal "python-notes"  
+3.	Learn how to change into that directory in the Terminal.  
+4.	Use Vim editor to create a file in this directory. Make the file, Save or Save As... and pick this directory.  
+      Downloading Vim
+      Vim is available for many different systems and there are several versions. This page will help you decide what to download.
+      The most popular:
+      MS-Windows:	Click this link to download the self-installing executable (using ftp).
+      Vim Tutorials - https://www.howtoforge.com/vim-basics
 5.	Go back to Terminal using just the keyboard to switch windows. 
 6.	Back in Terminal, see if you can list the directory to see your newly created file.  
 
