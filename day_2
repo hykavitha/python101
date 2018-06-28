@@ -1,0 +1,74 @@
+EX_01
+HW 
+1.	You should be back at a prompt similar to what you had before you typed python. If not,  find out why.  
+2.	Learn how to make a directory in the Terminal.  
+3.	Learn how to change into a directory in the Terminal.  
+4.	Use your editor to create a file in this directory. Make the file, Save or Save As... and pick this directory.  
+5.	Go back to Terminal using just the keyboard to switch windows. 
+6.	Back in Terminal, see if you can list the directory to see your newly created file.  
+
+
+EX1  - A Good First Program 
+Type the following text into a single file named ex1.py. This is important, as Python works best 
+with files ending in .py. 
+
+1  print("Hello World!")  
+2  print("Hello Again")  
+3  print("I like typing this.")  
+4  print("This is fun.")  
+5  print('Yay! Printing.')  
+6  print("I'd much rather you 'not'.")  
+7  print('I "said" do not touch this.')  
+
+
+
+EX2 - Comments and Pound Characters 
+Comments are very important in your programs. They are used to tell you what something does in English, and they also are used to disable parts of your program if you need to remove them temporarily. Here’s how you use comments in Python: 
+ex2.py 
+1  # A comment, this is so you can read your program later.  
+2  # Anything after the # is ignored by python.  
+3 4 print("I could have code like this.") # and the comment after is ignored 5 
+6  # You can also use a comment to "disable" or comment out code:  
+7  # print("This won't run.")  
+8 print("This will run.") 
+
+EX2-HW
+1.	How to comment out multiple lines? 
+2.	Make your script print another line.  
+3.	Make your script print only one of the lines.  
+4.	Why does the # in print("Hi # there.") not get ignored? T 
+5.	Check / read code backward
+6.	Take your ex2.py
+7.	Review each line going backward.
+8.	Start at the last line, and check each word in reverse against what you should have typed.
+
+Exercise 3: Numbers and Math
+
+Math symbols: Let's name them right away so you know what they are called.
++ plus
+- minus
+/ slash
+* asterisk
+% percent
+< less-than
+> greater-than
+<= less-than-equal
+>= greater-than-equal
+
+How does % work? 
+Another way to say it is, ”X divided by Y with J remaining.” For example, ”100 divided by 16 with 4 remaining.” The result of % is the J part, or the remaining part. 
+
+What is the order of operations? 
+Remember this acronym called PEMDAS which stands for Parentheses Exponents Multiplication Division Addition Subtraction. That’s the order Python follows as well. The mistake people make with PEMDAS is to think this is a strict order, as in ”Do P, then E, then M, then D, then A, then S.” The actual order is you do the multiplication and division (M&D) in one step, from left to right, then you do the addition and subtraction in one step from left to right. So, you could rewrite PEMDAS as PE(M&D)(A&S). 
+
+
+EX3-HW
+1.	Above each line, use the # to write a comment to yourself explaining what the line does. 
+2.	Find something you need to calculate and write a ex3_1.py file that does it. 
+
+
+
+
+
+
+
