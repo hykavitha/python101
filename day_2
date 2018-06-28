@@ -32,10 +32,10 @@ Comments are very important in your programs. They are used to tell you what som
 ex2.py 
 1  # A comment, this is so you can read your program later.  
 2  # Anything after the # is ignored by python.  
-3 4 print("I could have code like this.") # and the comment after is ignored 5 
-6  # You can also use a comment to "disable" or comment out code:  
-7  # print("This won't run.")  
-8 print("This will run.") 
+3  print("I could have code like this.") # and the comment after is ignored 5 
+4  # You can also use a comment to "disable" or comment out code:  
+5  # print("This won't run.")  
+6  print("This will run.") 
 
 EX2-HW
 1.	How to comment out multiple lines? 
