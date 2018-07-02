@@ -1,0 +1,11 @@
+4. Variables and Names
+
+If they didn’t use good names for things in their software, they’d get lost when they tried to read their code again.
+
+So what are variables?
+  A variable is a name for something. 
+  Similar to how my name ”kavitha” is a name for, ”The human who teaches this course.” 
+Programmers use these variable names to make their code read more like English.
+
+If you get stuck with this exercise, remember the tricks you have been taught so far of finding differences and focusing on details:
+1. Write a comment above each line explaining to yourself what it does in English. 
