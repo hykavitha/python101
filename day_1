@@ -58,3 +58,6 @@ Use Vim editor to create a file in this directory. Make the file, Save or Save A
 5.	Go back to Terminal using just the keyboard to switch windows. 
 6.	Back in Terminal, see if you can list the directory to see your newly created file. 
 
+
+ipython 
+http://archive.ipython.org/release/5.7.0/
