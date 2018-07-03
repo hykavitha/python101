@@ -48,5 +48,13 @@ Bitbucket supports pushing and pulling over HTTP to your remote Git repositories
 HW
 Write the above steps into Readme.txt and push it to git.
 
-
+instll vim 
+Use Vim editor to create a file in this directory. Make the file, Save or Save As... and pick this directory.  
+      Downloading Vim
+      Vim is available for many different systems and there are several versions. This page will help you decide what to download.
+      The most popular:
+      MS-Windows:	Click this link to download the self-installing executable (using ftp).
+      Vim Tutorials - https://www.howtoforge.com/vim-basics
+5.	Go back to Terminal using just the keyboard to switch windows. 
+6.	Back in Terminal, see if you can list the directory to see your newly created file. 
 
