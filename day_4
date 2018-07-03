@@ -1,0 +1,128 @@
+More Variables and Stirng
+How to access characters in a string?
+Terminal EX:
+DEL
+Concatenation
+String Formatting
+
+
+5. More Variables and String
+    Now we’ll do even more typing of variables and printing them out. 
+    This time we’ll use something called a ”format string.” 
+    Every time you put " (double-quotes) around a piece of text you have been making a string. 
+    A string is how you make something that your program might give to a human. 
+    You print strings, save strings to files, send strings to web servers, and many other things.
+  
+   Strings are really handy, so in this exercise you will learn 
+
+How to access characters in a string?
+  We can access individual characters using indexing and a range of characters using slicing. 
+  Index starts from 0. 
+  Trying to access a character out of index range will raise an IndexError. 
+  The index must be an integer. We can't use float or other types, this will result into TypeError.
+  
+  Can we use decimal number to access index position?
+  Can we access out of index range?
+  
+Terminal EX:
+  str = 'programiz'
+  print('str = ', str)
+
+  #first character
+  print('str[0] = ', str[0])
+  
+  # programming is fun
+  print('str[15] = ', str[15])
+  
+  # fun because we can fix 
+  print('str[1.5] = ', str[1.5])
+  
+  #last character
+  print('str[-1] = ', str[-1])
+
+  #slicing 2nd to 5th character
+  print('str[1:5] = ', str[1:5])
+
+  #slicing 6th to 2nd last character
+  print('str[5:-2] = ', str[5:-2])
+  
+ DEL:
+   We cannot delete or remove characters from a string. 
+   But deleting the string entirely is possible using the keyword del.
+ 
+ Terminal EX:
+  #try this
+  del str[1]
+  del str
+  
+ Concatenation of Two or More Strings
+    str1 = 'Hello'
+    str2 ='World!'
+
+    # using +
+    print('str1 + str2 = ', str1 + str2)
+
+    # using *
+    print('str1 * 3 =', str1 * 3)
+    
+Concatenation of Two or More String literals
+
+# two string literals together
+>>'Hello ''World!'
+'Hello World!'
+
+# using parentheses
+>> s = ('Hello '
+...      'World')
+>>> s
+'Hello World'
+
+String Formatting
+  
+  how to make strings that have variables embedded in them. 
+  You embed variables inside a string by using a special {} sequence and then put the variable you want inside the {} characters. 
+  You also must start the string with the letter f for ”format”, as in f"Hello {somevar}". 
+  This little f before the " (double-quote) and the {} characters tell Python 3, ”Hey, 
+  this string needs to be formatted. Put these variables in there.”
+
+  formatting C way
+    name = 'Fred'
+    age = 42
+    print('He said his name is %s and he is %s years old.' % (name, age))
+  
+  formattig python way
+    print('He said his name is {} and he is {} years old.'.format(name, age))
+   
+  formatting concatination way
+    print('He said his name is ' + name + ' and he is ' + str(
+          age) + ' years old.')
+ 
+  f-strings
+      print(f'He said his name is {name} and he is {age} years old.')
+      
+   https://cito.github.io/img/f-strings-1.png
+   
+   
+HW. 5
+1. Write a program to print these things in each lines using fstrings and format way
+  # input
+  my_name = 'Zed A. Shaw'
+  my_age=35#notalie
+  my_height = 74 # inches
+  my_weight = 180 # lbs
+  my_eyes = 'Blue'
+  my_teeth = 'White'
+  my_hair = 'Brown'
+  #output
+    Let's talk about Zed A. Shaw.
+    He's 74 inches tall.
+    He's 180 pounds heavy.
+    Actually that's not too heavy.
+    He's got Blue eyes and Brown hair.
+    His teeth are usually White depending on the coffee. If I add 35, 74, and 180 I get 289.
+
+2. Change all the variables so there is no my_ in front of each one. Make sure you change the name
+everywhere, not just where you used = to set them.
+3. Try to write some variables that convert the inches and pounds to centimeters and kilograms. Do
+not just type in the measurements. Work out the math in Python 
+(hint: take your height in feet and convert to inches & centimeters, weight in KG and convert to pounds, )
