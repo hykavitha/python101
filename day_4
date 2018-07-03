@@ -109,7 +109,18 @@ String Formatting
    
    
 HW. 4
-1. Write a program to print these things in each lines using fstrings and format way
+1. WAP to Find the Square Root
+2. WAP to find area of the triangle
+    If a, b and c are three sides of a triangle. Then,
+        s = (a+b+c)/2
+        area = √(s(s-a)*(s-b)*(s-c))
+3. WAP to solve quadratic quation
+    The standard form of a quadratic equation is:
+    ax2 + bx + c = 0, where
+    a, b and c are real numbers and
+    a ≠ 0
+    
+3. Write a program to print these things in each lines using fstrings and format way
   # input
   my_name = 'Zed A. Shaw'
   my_age=35#notalie
@@ -126,8 +137,8 @@ HW. 4
     He's got Blue eyes and Brown hair.
     His teeth are usually White depending on the coffee. If I add 35, 74, and 180 I get 289.
 
-2. Change all the variables so there is no my_ in front of each one. Make sure you change the name
+4. Change all the variables so there is no my_ in front of each one. Make sure you change the name
 everywhere, not just where you used = to set them.
-3. Try to write some variables that convert the inches and pounds to centimeters and kilograms. Do
+5. Try to write some variables that convert the inches and pounds to centimeters and kilograms. Do
 not just type in the measurements. Work out the math in Python 
 (hint: take your height in feet and convert to inches & centimeters, weight in KG and convert to pounds, )
