@@ -76,7 +76,9 @@ Concatenation of Two or More String literals
 ...      'World')
 >>> s
 'Hello World'
-
+ Ex:
+ ex5.py
+ 
 String Formatting
   
   how to make strings that have variables embedded in them. 
@@ -90,9 +92,9 @@ String Formatting
     age = 42
     print('He said his name is %s and he is %s years old.' % (name, age))
   
-  formattig python way
+  formatting by passing arguments 
     print('He said his name is {} and he is {} years old.'.format(name, age))
-   
+
   formatting concatination way
     print('He said his name is ' + name + ' and he is ' + str(
           age) + ' years old.')
@@ -102,8 +104,11 @@ String Formatting
       
    https://cito.github.io/img/f-strings-1.png
    
+   EX:
+   ex6.py, ex7.py ex8.py
    
-HW. 5
+   
+HW. 4
 1. Write a program to print these things in each lines using fstrings and format way
   # input
   my_name = 'Zed A. Shaw'
