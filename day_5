@@ -147,14 +147,29 @@ What is this?
   python test.py arg1 arg2 arg3
 The Python sys module provides access to any command-line arguments via the sys.argv. This serves two purposes −
 sys.argv is the list of command-line arguments
-len(sys.argv) is the number of command-line arguments.
+argv represents all the items that come along via the commandline input, 
+it's basically a an array holding the command line arguments of our program. 
+Don't forget that the counting starts at zero (0) not one (1).
+
 
 Terminal Ex:
+  import sys
+  program_name = sys.argv[0]
+  arguments = sys.argv[1:]
+  count = len(arguments)
+  
+  import sys
+  print (sys.argv)
+
   import sys
   print 'Number of arguments:', len(sys.argv), 'arguments.'
   print 'Argument List:', str(sys.argv)
 
-ex10.py
+ex11.py (please create a value ERROR and check why?) 
+Are the command line arguments strings? 
+Yes, they come in as strings, even if you typed numbers on the command line. 
+Use int() to convert them just like with int(input()).
+
 
 
 What are if...else statement in Python?
@@ -198,6 +213,9 @@ Python if...else Statement
     else:
         print("Negative number")
 
+EX:
+ex_13.py, ex_14.py
+
 Python if...elif...else Statement
 Syntax of if...elif...else
 
@@ -233,6 +251,7 @@ Terminal EX:
     else:
         print("Negative number")
 
+ex_15.py
 
 Python Nested if statements
 Any number of these statements can be nested inside one another. 
@@ -255,7 +274,9 @@ Python Nested if Example
           print("Positive number")
   else:
       print("Negative number")
-    
+
+
 HW.5
 1. WAP to implement all string fnctionalities and comment on each and every function after looking at the result. 
-2. 
+2. WAP to find largest number of 3 numbers (a, b, c), ask input from users.
+
