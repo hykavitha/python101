@@ -1,3 +1,10 @@
+Today's topics
+Python String Methods
+Escape Sequence
+What IF
+IF ELSE
+For loop
+
 Python String Methods
   String is a sequence of characters. It's commonly used to represent text.
   There are number of methods defined in Python to work with strings.
@@ -93,6 +100,162 @@ This is a
 good example
 >>> print(r"This is \x61 \ngood example")
 This is \x61 \ngood example
+ex_9.py
 
+Asking input/ Prompting People
+
+  we want to do now is get data into your programs.
+  Most of what software does is the following:
+  1. Take some kind of input from a person.
+  2. Change it.
+  3. Print out something to show how it changed.
+
+Terminal EX:
+
+  print("How old are you?", end=' ')
+  age = input()
+  print("How tall are you?", end=' ')
+  height = input()
+  print("How much do you weigh?", end=' ')
+  weight = input()
+  print(f"So, you're {age} old, {height} tall and {weight} heavy.")
+
+  How do I get a number from some one so I can do math? 
+  x=int(input())
+  which gets the number as a string from input() then converts it to an integer using int().
+
+  age = input("How old are you? ")
+  height = input("How tall are you? ")
+  weight = input("How much do you weigh? ")
+  print(f"So, you're {age} old, {height} tall and {weight} heavy.")
+
+  age = input("Your age? ")
+  print(age, type(age))
+
+  age = raw_input("Your age? ")
+  print(age, type(age))
+  age = int(raw_input("Your age? "))
+
+  # DO this for all input... 
+  type(age) 
+  print(age, type(age))
+
+System Arguments:
+ We’ll write a script that also accepts arguments.
+
+What is this?
+  python test.py arg1 arg2 arg3
+The Python sys module provides access to any command-line arguments via the sys.argv. This serves two purposes −
+sys.argv is the list of command-line arguments
+len(sys.argv) is the number of command-line arguments.
+
+Terminal Ex:
+  import sys
+  print 'Number of arguments:', len(sys.argv), 'arguments.'
+  print 'Argument List:', str(sys.argv)
 
 ex10.py
+
+
+What are if...else statement in Python?
+  The if…elif…else statement is used in Python for decision making. The program evaluates the test expression and will execute statement(s) only if the text expression is True.
+
+If the text expression is False, the statement(s) is not executed.
+Python if Statement Syntax
+if test expression:
+    statement(s)
+ 
+Python if...else Statement
+  Syntax of if...else
+  if test expression:
+      Body of if
+  else:
+      Body of else
+ 
+ Terminl EX
+ EX: if 
+
+     num = 3
+      if num > 0:
+          print(num, "is a positive number.")
+      print("This is always printed.")
+
+      num = -1
+      if num > 0:
+          print(num, "is a positive number.")
+      print("This is also always printed.")
+      
+    EX: if...else 
+
+    num = 3
+
+    # Try these two variations as well. 
+    # num = -5
+    # num = 0
+
+    if num >= 0:
+        print("Positive or Zero")
+    else:
+        print("Negative number")
+
+Python if...elif...else Statement
+Syntax of if...elif...else
+
+  if test expression:
+      Body of if
+  elif test expression:
+      Body of elif
+  else: 
+      Body of else
+      
+The elif is short for else if. It allows us to check for multiple expressions.
+If the condition for if is False, it checks the condition of the next elif block and so on.
+If all the conditions are False, body of else is executed.
+Only one block among the several if...elif...else blocks is executed according to the condition.
+The if block can have only one else block. But it can have multiple elif blocks.
+
+Terminal EX:
+    # In this program, 
+    # we check if the number is positive or
+    # negative or zero and 
+    # display an appropriate message
+
+    num = 3.4
+
+    # Try these two variations as well:
+    # num = 0
+    # num = -4.5
+
+    if num > 0:
+        print("Positive number")
+    elif num == 0:
+        print("Zero")
+    else:
+        print("Negative number")
+
+
+Python Nested if statements
+Any number of these statements can be nested inside one another. 
+Indentation is the only way to figure out the level of nesting. 
+This can get confusing, so must be avoided if we can.
+
+Terminal Ex:
+Python Nested if Example
+  # In this program, we input a number
+  # check if the number is positive or
+  # negative or zero and display
+  # an appropriate message
+  # This time we use nested if
+
+  num = float(input("Enter a number: "))
+  if num >= 0:
+      if num == 0:
+          print("Zero")
+      else:
+          print("Positive number")
+  else:
+      print("Negative number")
+    
+HW.5
+1. WAP to implement all string fnctionalities and comment on each and every function after looking at the result. 
+2. 
