@@ -1,0 +1,110 @@
+Numbers And Math Contd...
+
+ Python programming language as a calculator.
+ 
+Terminal Ex
+  print(1 + 5)
+  a = 88
+  b = 103
+  print(a + b)
+  print(0.6/0.2)
+  print(0.6//0.2)
+  mass_stone = mass_kg * 2.2 / 14
+ round function
+ print (round(3.14159265, 2))
+  
+  c = -36
+  d = 25
+  print(c + d)
+  Because integers can be both positive and negative numbers (and 0 too), we can add a negative number with a positive number:
+  e = 5.5
+  f = 2.5
+  print(e + f)
+  Because we added two floats together, Python returned a float value with a decimal place.
+
+
+  g = 75.67
+  h = 32
+  print(g - h)
+  Here, we subtracted an integer from a float. 
+  Python will return a float if at least one of the numbers involved in an equation is a float.
+
+4. Variables and Names
+
+  A variable is a name for something. 
+  If they didn’t use good names for things in their software, they’d get lost when they tried to read their code again.
+
+What are the variables in Python?
+  Python - Variable Types. Variables are nothing but reserved memory locations to store values with names to refer. 
+  This means that when you create a variable you reserve some space in memory. 
+  Based on the data type of a variable, the interpreter allocates memory and decides what can be stored in the reserved memory.
+
+
+So what are variables?
+  Similar to how my name ”kavitha” is a name for, ”The human who teaches this course.” 
+Programmers use these variable names to make their code read more like English.
+
+Do you have to declare variables in Python?
+ There's no need to declare new variables in Python. 
+ If we're talking about variables in functions or modules, no declaration is needed. 
+ Just assign a value to a name where you need it: mymagic = "Magic" . ... 
+ Scope: Variables have scope, so yes it is appropriate to have variables that are specific to your function.
+
+
+ex4.py
+Make sure you know what=is called(equals) and that its purpose is to give data(numbers,strings, etc.) names (cars_driven, passengers).
+
+ex4_1.py
+
+Can we write x=100 instead of x = 100? 
+  You can, but it’s bad form. You should add space around op- erators like this so that it’s easier to read.
+
+Multiple Assignment
+  Python allows you to assign a single value to several variables simultaneously. For example −
+  a = b = c = 1
+  Here, an integer object is created with the value 1, 
+  and all three variables are assigned to the same memory location. 
+ 
+Multiple Objects to Multiple Variables
+  You can also assign multiple objects to multiple variables. For example −
+  a,b,c = 1,2,"john"
+  Here, two integer objects with values 1 and 2 are assigned to variables a and b respectively, 
+  and one string object with the value "john" is assigned to the variable c.
+
+Standard Data Types
+  The data stored in memory can be of many types. 
+  Ex: a person's age is stored as a numeric value 
+  and his or her address is stored as alphanumeric characters. 
+  
+  Python has various standard data types that are used to define the operations possible on them and the storage method for each of them.
+  Python has five standard data types −
+
+  Numbers
+  String
+  List
+  Tuple
+  Dictionary
+
+Python Numbers
+  Number data types store numeric values. Number objects are created when you assign a value to them. For example −
+  var1 = 1
+  var2 = 10
+  You can also delete the reference to a number object by using the del statement. 
+  You can delete a single object or multiple objects by using the del statement. For example −
+  del var
+  del var_a, var_b
+  
+  Python supports four different numerical types −
+    int (signed integers)
+    long (long integers, they can also be represented in octal and hexadecimal)
+    float (floating point real values)
+    complex (complex numbers)
+
+How can I round a floating point number? 
+  You can use the round() function like this:round(1.7333).
+
+HW.4
+1. Write comments above each of the variable assignments in ex4.py & ex4_1.py.
+
+
+
