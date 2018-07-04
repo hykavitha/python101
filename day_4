@@ -77,7 +77,7 @@ Concatenation of Two or More String literals
 >>> s
 'Hello World'
  Ex:
- ex5.py
+ ex5.py, ex7.py
  
 String Formatting
   
@@ -105,11 +105,12 @@ String Formatting
    https://cito.github.io/img/f-strings-1.png
    
    EX:
-   ex6.py, ex7.py ex8.py
+   ex6.py,ex8.py
    
    
 HW. 4
 1. WAP to Find the Square Root
+    sqrt = x**(1.0/2)
 2. WAP to find area of the triangle
     If a, b and c are three sides of a triangle. Then,
         s = (a+b+c)/2
