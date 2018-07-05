@@ -1,0 +1,190 @@
+This course will introduce the learner to the basics of the python programming environment, 
+  including fundamental python programming techniques such as lambdas, 
+  reading and manipulating csv files, and the numpy library. 
+The course will introduce data manipulation and cleaning techniques using the popular 
+python pandas data science library 
+introduce the abstraction of the Series and DataFrame as the central data structures for data analysis, 
+along with tutorials on how to use functions such as 
+  groupby, 
+  merge, 
+  pivot tables effectively. 
+
+By the end of this course, 
+students will be able to take tabular data, 
+clean it, 
+manipulate it, and run basic inferential statistical analyses. 
+
+WEEK-1
+
+
+In this week of the course you'll learn the fundamentals of one of 
+the most important toolkits Python has for data cleaning and processing -- pandas. 
+You'll learn how to read in data into DataFrame structures,
+how to query these structures, and the details about such structures are indexed. 
+The module ends with a programming assignment and a discussion question.
+
+Python Functions
+Python Types and Sequences
+Python More on Strings
+Python Demonstration: Reading and Writing CSV files
+Python Dates and Times
+Advanced Python Objects, map()
+Advanced Python Lambda and List Comprehensions
+Advanced Python Demonstration: The Numerical Python Library (NumPy)
+Assignment 1
+
+The Series Data Structure
+Querying a Series
+The DataFrame Data Structure
+DataFrame Indexing and Loading
+Querying a DataFrame
+Indexing Dataframes
+Missing Values
+Assignment 2
+
+
+Week 3
+In this week you'll deepen your understanding of the python pandas 
+library by learning how to merge DataFrames, generate summary tables, 
+group data into logical pieces, and manipulate dates. 
+We'll also refresh your understanding of scales of data, 
+and discuss issues with creating metrics for analysis. 
+The week ends with a more significant programming assignment.
+introduced to a variety of statistical techniques such a distributions, 
+sampling and t-tests. The majority of the week will be dedicated to your course project, 
+where you'll engage in a real-world data cleaning activity and provide evidence for (or against!) a given hypothesis. 
+This project is suitable for a data science portfolio, and will test your knowledge of 
+cleaning, merging, manipulating, and test for significance in data. 
+The week ends with two discussions of science and the rise of the fourth paradigm -- data driven discovery.
+
+
+Pandas Idioms
+Group by
+Scales
+Pivot Tables
+Date Functionality
+Assignment 3
+
+Distributions
+More Distributions
+Hypothesis Testing in Python
+The End of Theory
+
+Assignments will be like this:
+For the function get_list_of_university towns, the data is in the text file university_towns.txt is in the following format:
+StateOne[edit]
+RegionOne (UniversityOne)[1]
+RegionTwo (UniversityTwo)
+RegionThree (UniversityThree)[2]
+The question asks for this data to be cleaned up and returned in a DataFrame of this format:
+
+State	RegionName
+0	StateOne	RegionOne
+1	StateOne	RegionTwo
+2	StateOne	RegionThree
+So for example if you have:
+Alabama[edit]
+Auburn (Auburn University)[1]
+Florence (University of North Alabama)
+Jacksonville (Jacksonville State University)[2]
+This needs to be converted into the dataframe:
+State	RegionName
+0	Alabama	Auburn
+1	Alabama	Florence
+2	Alabama	Jacksonville
+Some tips for cleaning the data:
+
+1. For "State", removing characters from "[" to the end.
+
+2. For "RegionName", when applicable, removing every character from " (" to the end.
+
+3. Depending on how you read the data, you may need to remove newline character '\n'.
+
+There may be a few RegionNames in the list that don't match up well to actual cities, 
+but don't worry about doing anything special for these entries for the purposes of this assignment. 
+Punctuation at the end of the RegionName not encapsulated in the parenthesis does not need to be removed.
+
+
+Week 4: 
+Fundamentals of Machine Learning - Intro to SciKit Learn
+This module introduces basic machine learning concepts, tasks, and workflow using an example classification problem based on the K-nearest neighbors method, and implemented using the scikit-learn library.
+
+Key Concepts in Machine Learning
+Python Tools for Machine Learning
+Module 1 Notebook
+An Example Machine Learning Problem
+Examining the Data
+K-Nearest Neighbors Classification
+The Foundations of Algorithmic Bias 
+Quiz - 1 
+Assignment 1
+
+Week 5
+This module delves into a wider variety of supervised learning methods for both classification and regression, 
+learning about the connection between model complexity and generalization performance, 
+the importance of proper feature scaling, 
+and how to control model complexity by applying techniques like regularization to avoid overfitting. 
+In addition to k-nearest neighbors, 
+this week covers linear regression (least-squares, ridge, lasso, and polynomial regression), 
+logistic regression, support vector machines, the use of cross-validation for model evaluation, and decision trees.
+
+ Overfitting and Underfitting
+ Supervised Learning
+ K-Nearest Neighbors
+ Linear Regression
+ Linear Regression
+ Logistic Regression
+ Linear Classifiers
+ Multi-Class Classification
+ Kernelized Support Vector Machines
+ Cross-Validation
+ Decision Trees
+ Classifier Visualization Playspace
+ Assignment 2
+ 
+ week 6 
+Evaluation
+This module covers evaluation and model selection methods that you can use to 
+help understand and optimize the performance of your machine learning models.
+
+ Model Evaluation & Selection
+ Confusion Matrices & Basic Evaluation Metrics
+ Classifier Decision Functions
+ Precision-recall and ROC curves
+ Multi-Class Evaluation
+ Regression Evaluation
+ Practical Guide to Controlled Experiments on the Web (optional)
+ Model Selection
+ Assignment 3
+ 
+ Week 7: Supervised Machine Learning - Part 2
+This module covers more advanced supervised learning methods that include ensembles of 
+trees (random forests, gradient boosted trees)
+ Naive Bayes Classifiers
+ Random Forests
+ Gradient Boosted Decision Trees
+
+Week 8: 
+Neural networks (with an optional summary on deep learning). 
+You will also learn about the critical problem of data leakage in machine learning and how to detect and avoid it.
+Neural Networks
+ Neural Networks Made Easy (optional)
+ Play with Neural Networks
+ Deep Learning (Optional)
+ Deep Learning in a Nutshell
+ Assisting Pathologists in Detecting Cancer with Deep Learning (optional)
+Data Leakage
+ The Treachery of Leakage (optional)
+ Leakage in Data Mining
+ Data Leakage Example
+ Rules of Machine Learning
+ Assignment 4
+ Unsupervised Learning Notebook
+ Introduction
+ Dimensionality Reduction and Manifold Learning
+ Clustering
+ How to Use t-SNE Effectively
+ How Machines Make Sense of Big Data
+
+
+
