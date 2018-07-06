@@ -1,6 +1,5 @@
 1. count vowles in python string
 2. reverse a string
 3. check whether the string is a palindrome or not
-4. decimal multiplication on string does it, 
-although converting the string to binary and doing a binary multiplication would obviously be more effective
+4. BMI calculator
 5. print * in a triangle pattern 
