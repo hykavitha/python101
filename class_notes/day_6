@@ -75,6 +75,20 @@ Terminal Ex:
     for i in range(len(genre)):
       print("I like", genre[i])
 
+Enumerate
+Enumerate is a built-in function of Python. 
+It’s usefulness can not be summarized in a single line. 
+Yet most of the newcomers and even some advanced programmers are unaware of it. 
+It allows us to loop over something and have an automatic counter. Here is an example:
+Terminal EX:
+  for loop with enumeration:
+  my_list = ['apple', 'banana', 'grapes', 'pear']
+  for c, value in enumerate(my_list, 1):
+      print(c, value)
+   choices = []
+    for index, item in enumerate(choices):
+        print index + 1, item
+
 for loop with else
   A for loop can have an optional else block as well. The else part is executed if the items in the sequence used in for loop exhausts.
   break statement can be used to stop a for loop. In such case, the else part is ignored.
