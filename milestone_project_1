@@ -3,3 +3,7 @@
 3. check whether the string is a palindrome or not
 4. BMI calculator
 5. print * in a triangle pattern 
+6. remove punctuations from the string, consider this hs the punctuations list.  punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+7. Take a sentence, sort words in a sentence in an alphabetical order use string split() and string sort functions
+8. WAP  to find the factorial of a number provided by the user.
+
