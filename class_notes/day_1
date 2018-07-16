@@ -60,4 +60,12 @@ Use Vim editor to create a file in this directory. Make the file, Save or Save A
 
 
 ipython 
-http://archive.ipython.org/release/5.7.0/
+Python 2 ≤ 2.7.8 and Python 3 ≤ 3.3
+Flying in the face of its 'batteries included' motto, Python ships without a package manager. To make matters worse, Pip was--until recently--ironically difficult to install.
+
+Official instructions
+Per https://pip.pypa.io/en/stable/installing/#do-i-need-to-install-pip:
+
+Download get-pip.py, being careful to save it as a .py file rather than .txt. Then, run it from the command prompt:
+
+python get-pip.py
