@@ -213,27 +213,148 @@ How do you call a function?
 >>> greet('Paul')
 Hello, Paul. Good morning!
 
+>>> print(greet.__doc__)
+This function greets to
+	the person passed into the
+	name parameter
+	
+Docstring
+The first string after the function header is called the docstring and is short for documentation string. 
+It is used to explain in brief, what a function does.
 
-def cheese_and_crackers(cheese_count, boxes_of_crackers): 
-  print(f"You have {cheese_count} cheeses!")
-  print(f"You have {boxes_of_crackers} boxes of crackers!") 
-  print("Man that's enough for a party!")
-  print("Get a blanket.\n")
- 
- 
- print("We can just give the function numbers directly:") 
- #calling your function
- cheese_and_crackers(20, 30)
- print("OR, we can use variables from our script:") 
- amount_of_cheese = 10
- amount_of_crackers = 50
- #call again
- cheese_and_crackers(amount_of_cheese, amount_of_crackers)
- print("We can even do math inside too:")
- cheese_and_crackers(10 + 20, 5 + 6)
- print("And we can combine the two, variables and math:") 
- #call again
- cheese_and_crackers(amount_of_cheese + 100, amount_of_crackers + 1000)
+Although optional, documentation is a good programming practice.
+
+The return statement
+The return statement is used to exit a function and go back to the place from where it was called.
+
+Syntax of return
+return [expression_list]
+
+This statement can contain expression which gets evaluated and the value is returned. 
+If there is no expression in the statement or the return statement itself is not present inside a function, 
+then the function will return the None object.
+
+Terminal EX:
+
+def absolute_value(num):
+	"""This function returns the absolute
+	value of the entered number"""
+
+	if num >= 0:
+		return num
+	else:
+		return -num
+
+# Output: 2
+print(absolute_value(2))
+
+# Output: 4
+print(absolute_value(-4))
+
+Scope and Lifetime of variables
+Scope of a variable is the portion of a program where the variable is recognized. 
+Parameters and variables defined inside a function is not visible from outside. Hence, they have a local scope.
+Lifetime of a variable is the period throughout which the variable exits in the memory. 
+The lifetime of variables inside a function is as long as the function executes.
+They are destroyed once we return from the function. 
+Hence, a function does not remember the value of a variable from its previous calls.
+
+def my_func():
+	x = 10
+	print("Value inside function:",x)
+
+x = 20
+my_func()
+print("Value outside function:",x)
+
+Types of Functions:
+Python Built-in Function
+
+print(*objects, sep=' ', end='\n', file=sys.stdout)¶
+	Print objects to the stream file, separated by sep and followed by end. sep, end and file, 
+	if present, must be given as keyword arguments.
+
+range(stop)¶
+range(start, stop[, step])
+	This is a versatile function to create lists containing arithmetic progressions. 
+	It is most often used in for loops. The arguments must be plain integers. 
+	If the step argument is omitted, it defaults to 1. 
+	If the start argument is omitted, it defaults to 0. 
+	The full form returns a list of plain integers [start, start + step, start + 2 * step, ...]. 
+	If step is positive, the last element is the largest start + i * step less than stop; 
+	if step is negative, the last element is the smallest start + i * step greater than stop. 
+	step must not be zero (or else ValueError is raised). 
+	
+Terminal Example:
+	>>> range(10)
+	[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+	>>> range(1, 11)
+	[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+	>>> range(0, 30, 5)
+	[0, 5, 10, 15, 20, 25]
+	>>> range(0, 10, 3)
+	[0, 3, 6, 9]
+	>>> range(0, -10, -1)
+	[0, -1, -2, -3, -4, -5, -6, -7, -8, -9]
+	>>> range(0)
+	[]
+	>>> range(1, 0)
+
+enumerate(sequence, start=0)
+	Returns an enumerate object. 
+	sequence must be a sequence, an iterator, or some other object which supports iteration. 
+	The next() method of the iterator returned by enumerate() returns a tuple containing a 
+	count (from start which defaults to 0) and the values obtained from iterating over sequence:
+>>> seasons = ['Spring', 'Summer', 'Fall', 'Winter']
+>>> list(enumerate(seasons))
+[(0, 'Spring'), (1, 'Summer'), (2, 'Fall'), (3, 'Winter')]
+>>> list(enumerate(seasons, start=1))
+[(1, 'Spring'), (2, 'Summer'), (3, 'Fall'), (4, 'Winter')]
+Equivalent to:
+
+def enumerate(sequence, start=0):
+    n = start
+    for elem in sequence:
+        yield n, elem
+        n += 1
+	
+Lets go  through this for few minutes
+ 	https://docs.python.org/2/library/functions.html
+
+User Defined Functions : we build this
+
+Pass by reference vs value
+All parameters (arguments) in the Python language are passed by reference. 
+It means if you change what a parameter refers to within a function, the change also reflects back in the calling function. 
+
+
+For example −
+Here, we are maintaining reference of the passed object and appending values in the same object.
+# Function definition is here
+def changeme( mylist ):
+   "This changes a passed list into this function"
+   mylist.append([1,2,3,4]);
+   print "Values inside the function: ", mylist
+   return
+
+# Now you can call changeme function
+mylist = [10,20,30];
+changeme( mylist );
+print "Values outside the function: ", mylist
+
+
+# Function definition is here
+def changeme( mylist ):
+   "This changes a passed list into this function"
+   mylist = [1,2,3,4]; # This would assig new reference in mylist
+   print "Values inside the function: ", mylist
+   return
+
+# Now you can call changeme function
+mylist = [10,20,30];
+changeme( mylist );
+print "Values outside the function: ", mylist
+
 
 This shows all the different ways we’re able to give our function cheese_and_crackers 
 the values it needs to print them. We can give it straight numbers. 
