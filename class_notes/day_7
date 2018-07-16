@@ -324,9 +324,41 @@ Lets go  through this for few minutes
 User Defined Functions : we build this
 
 Pass by reference vs value
-All parameters (arguments) in the Python language are passed by reference. 
+All variables/ parameters (arguments) in the Python language are passed by reference. 
 It means if you change what a parameter refers to within a function, the change also reflects back in the calling function. 
 
+
+Python uses a mechanism, which is known as "Call-by-Object", 
+sometimes also called "Call by Object Reference" or "Call by Sharing".
+
+Paramterübergabe If you pass immutable arguments like integers,
+strings or tuples to a function, the passing acts like call-by-value. 
+The object reference is passed to the function parameters. 
+They can't be changed within the function, because they can't be changed at all, i.e. they are immutable. 
+It's different, if we pass mutable arguments. 
+They are also passed by object reference, but they can be changed in place in the function. 
+If we pass a list to a function, 
+we have to consider two cases: Elements of a list can be changed in place, 
+i.e. the list will be changed even in the caller's scope. 
+If a new list is assigned to the name, the old list will not be affected,
+i.e. the list in the caller's scope will remain untouched.
+
+This means that Python initially behaves like call-by-reference, 
+but as soon as we are changing the value of such a variable, Python "switches" to call-by-value.
+>>> def ref_demo(x):
+    print "x=",x," id=",id(x)
+    x=42
+    print "x=",x," id=",id(x)
+    
+>>> x = 9
+>>> id(x)
+41902552
+>>> ref_demo(x)
+x= 9  id= 41902552
+x= 42  id= 41903752
+>>> id(x)
+41902552
+>>> 
 
 For example −
 Here, we are maintaining reference of the passed object and appending values in the same object.
@@ -355,7 +387,30 @@ mylist = [10,20,30];
 changeme( mylist );
 print "Values outside the function: ", mylist
 
+Pass by value:
+Python is different. As we know, in Python, “Object references are passed by value”.
 
+Terminal Ex:
+Tell me the difference between these two example :
+
+#pass by value
+
+def reassign (list):
+	list=[0,1]
+	return list 
+	
+print(list)
+print(reassign(list))
+print(list)
+
+#pass by reference
+def reassign (list):
+	list.append([0,1])
+	return list 
+
+list1= reassign(list)
+print(list1)
+print(list)
 This shows all the different ways we’re able to give our function cheese_and_crackers 
 the values it needs to print them. We can give it straight numbers. 
 We can give it variables. We can give it math. We can even combine math and variables.
