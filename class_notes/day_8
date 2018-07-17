@@ -1,4 +1,202 @@
+Tuples 
 
+
+A Tuple is a collection of Python objects separated by commas. In someways a tuple is similar to a list in terms of indexing, nested objects and repetition but a tuple is immutable unlike lists which are mutable.
+	Creating a tuple
+	Creating non-empty tuples
+	Length of a Tuple
+	Concatenation of Tuples
+	Nesting of Tuples
+	Repetition in Tuples
+	Immutable Tuples
+	Slicing in Tuples
+	Deleting a Tuple
+	List of Tuples
+	Converting list to a Tuple
+
+
+Terminal EX:
+	Creating a tuple 
+	# An empty tuple
+	empty_tuple = ()
+	print (empty_tuple)
+
+
+	# Creating non-empty tuples
+
+	# One way of creation
+	tup = 'python', 'Course'
+	print(tup)
+
+	# Another for doing the same
+	tup = ('python', 'Course')
+	print(tup)
+	
+	Length of a Tuple
+	tuple2 = ('python', 'Course')
+	print(len(tuple2))
+
+	Concatenation of Tuples
+
+	# Code for concatenating 2 tuples
+
+	tuple1 = (0, 1, 2, 3)
+	tuple2 = ('python', 'Course')
+
+	# Concatenating above two
+	print(tuple1 + tuple2)
+
+
+
+	Nesting of Tuples
+
+	# Code for creating nested tuples
+
+	tuple1 = (0, 1, 2, 3)
+	tuple2 = ('python', 'Course')
+	tuple3 = (tuple1, tuple2)
+	print(tuple3)
+	
+	Repetition in Tuples
+
+	# Code to create a tuple with repetition
+
+	tuple3 = ('python',)*3
+	print(tuple3)
+
+	tuple4 = ('python')*3
+	print(tuple4)
+	
+	Immutable Tuples
+
+	#code to test that tuples are immutable
+
+	tuple1 = (0, 1, 2, 3)
+	tuple1[0] = 4
+	print(tuple1)
+	
+	Slicing in Tuples
+
+	# code to test slicing
+
+	tuple1 = (0 ,1, 2, 3)
+	print(tuple1[1:])
+	print(tuple1[::-1])
+	print(tuple1[2:4])
+
+	Deleting a Tuple
+
+	# Code for deleting a tuple
+
+	tuple3 = ( 0, 1)
+	del tuple3
+	print(tuple3)
+
+	#Lets see how to delete a tuple
+	myTup = tuples = [('a', 9), ('b', 8), ('c', 7), ('d', 6), ('e', 5), ('f
+  	 ', 4), ('g', 3), ('h', 2), ('i', 1), ('j', 0)]
+     
+
+	Converting list to a Tuple
+
+	# Code for converting a list and a string into a tuple
+
+	list1 = [0, 1, 2]
+	print(tuple(list1))
+	print(tuple('python')) # string 'python'
+	
+	Tuples in a loop
+
+	#python code for creating tuples in a loop
+
+	tup = ('Course',)
+	n = 5  #Number of time loop runs
+	for i in range(int(n)):
+	    tup = (tup,)
+	    print(tup)
+	
+	#Some Built-in Functions with Tuples
+	
+	Using cmp(), max() , min()
+
+	# A python program to demonstrate the use of 
+	# cmp(), max(), min()
+
+	tuple1 = ('python', 'Course')
+	tuple2 = ('coder', 1)
+
+	if (cmp(tuple1, tuple2) != 0):
+
+	    # cmp() returns 
+	    0 if matched, 
+	    1 when not tuple1 is longer and 
+	    -1 when tuple1 is shoter
+	    print('Not the same')
+	else:
+	    print('Same')
+	print ('Maximum element in tuples 1,2: ' +
+		str(max(tuple1)) +  ',' +
+		str(max(tuple2)))
+	print ('Minimum element in tuples 1,2: ' +
+	     str(min(tuple1)) + ','  + str(min(tuple2)))
+     
+
+
+Look for cmp()
+https://www.geeksforgeeks.org/python-cmp-function/
+
+
+HW
+What's the difference between lists and tuples?
+Please refer this stack overflow reference https://stackoverflow.com/questions/626759/whats-the-difference-between-lists-and-tuples
+
+Difference between list and tuple
+Literal
+
+someTuple = (1,2)
+someList  = [1,2] 
+Size
+
+a = tuple(range(1000))
+b = list(range(1000))
+
+a.__sizeof__() # 8024
+b.__sizeof__() # 9088
+Due to the smaller size of a tuple operation, it becomes a bit faster, but not that much to mention about until you have a huge number of elements.
+
+Permitted operations
+
+b    = [1,2]   
+b[0] = 3       # [3, 2]
+
+a    = (1,2)
+a[0] = 3       # Error
+That also means that you can't delete an element or sort a tuple. However, you could add new element to both list and tuple with the only difference that you will change id of the tuple by adding element
+
+a     = (1,2)
+b     = [1,2]  
+
+id(a)          # 140230916716520
+id(b)          # 748527696
+
+a   += (3,)    # (1, 2, 3)
+b   += [3]     # [1, 2, 3]
+
+id(a)          # 140230916878160
+id(b)          # 748527696
+Usage
+
+As a list is mutable, it can't be used as a key in a dictionary, whereas a tuple can be used.
+
+a    = (1,2)
+b    = [1,2] 
+
+c = {a: 1}     # OK
+c = {b: 1}     # Error
+
+
+index = next(i for i, (t1, t2) in enumerate(myTup) if t2 < threshold)
+del myTup[index:]
 
 Functions and Variables
 Functions may have been a mind-blowing amount of information, but do not worry. 
