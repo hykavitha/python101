@@ -146,9 +146,13 @@ Look for cmp()
 https://www.geeksforgeeks.org/python-cmp-function/
 
 
-HW
-What's the difference between lists and tuples?
+HW 8
+WAP to do - What's the difference between lists and tuples?
 Please refer this stack overflow reference https://stackoverflow.com/questions/626759/whats-the-difference-between-lists-and-tuples
+convert it into a normal forloop 
+	multilist = [[0 for col in range(colNum)] for row in range(rowNum)]
+under stand and code this, also please comment
+	https://stackoverflow.com/questions/1280667/in-python-is-there-an-easier-way-to-write-6-nested-for-loops
 
 Difference between list and tuple
 Literal
