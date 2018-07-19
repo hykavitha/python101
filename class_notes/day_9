@@ -10,6 +10,8 @@ Files:
   With Statement
   DIR in python 
   Renaming and Deleting Files
+  r/w json
+  r/w xml
 
   File Positions
 
@@ -139,6 +141,63 @@ os.mkdir("newdir")
 os.chdir("newdir")
 os.getcwd()
 os.rmdir('dirname')
+
+
+Reading and Writing JSON to a File
+
+Terminal EX:
+>>> import json
+>>> data = {'people':[{'name': 'Scott', 'website': 'stackabuse.com', 'from': 'Nebraska'}]}
+>>> json.dumps(data, indent=4)
+
+
+{
+    "people": [
+        {
+            "website": "stackabuse.com", 
+            "from": "Nebraska", 
+            "name": "Scott"
+        }
+    ]
+    
+    loads
+    
+    with open('data.txt') as json_file:  
+      data = json.load(json_file)
+    
+    lets look at this code:
+    https://gist.github.com/billroy/3761495
+    
+    
+    
+Reading and Writing XML to a File
+
+Terminal EX:
+  from xml.dom import minidom
+
+  # parse an xml file by name
+  mydoc = minidom.parse('items.xml')
+
+  items = mydoc.getElementsByTagName('item')
+
+  # one specific item attribute
+  print('Item #2 attribute:')  
+  print(items[1].attributes['name'].value)
+
+  # all item attributes
+  print('\nAll attributes:')  
+  for elem in items:  
+      print(elem.attributes['name'].value)
+
+  # one specific item's data
+  print('\nItem #2 data:')  
+  print(items[1].firstChild.data)  
+  print(items[1].childNodes[0].data)
+
+  # all items data
+  print('\nAll item data:')  
+  for elem in items:  
+      print(elem.firstChild.data)
 
 
 
