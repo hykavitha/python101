@@ -1,0 +1,192 @@
+The Truth Terms
+In Python we have the following terms (characters and phrases) for determining if something is ”True” or ”False.” 
+Logic on a computer is all about seeing if some combination of these characters and some variables is True at that point in the program.
+
+* and 
+• or
+• not
+• != (not equal)
+• == (equal)
+• >= (greater-than-equal) • <= (less-than-equal)
+• True
+• False
+You actually have run into these characters before but maybe not the terms. The terms (and, or, not) actually work the way you expect them to, just like in English.
+
+The Truth Tables
+We will now use these characters to make the truth tables you need to memorize.
+REFER LPTHW
+
+
+Boolean Practice
+
+
+Terminal EX:
+
+1. True and True
+2. False and True
+3. 1==1and2==1 4. "test" == "test"
+5. 1==1or2!=1
+6. Trueand1==1
+7. False and 0 != 0
+8. Trueor1==1
+9. "test" == "testing"
+10. 1!=0and2==1
+11. "test" != "testing"
+12. "test" == 1
+13. not (True and False)
+14. not(1==1and0!=1)
+15. not (10 == 1 or 1000 == 1000)
+16. not(1!=10or3==4)
+17. not ("testing" == "testing" and "Zed" == "Cool Guy") 18. 1==1and(not("testing"==1or1==0))
+19. "chunky" == "bacon" and (not (3 == 4 or 3 == 3))
+20. 3 == 3 and (not ("testing" == "testing" or "Python" == "Fun"))
+
+Whenever you see these Boolean logic statements, 
+you can solve them easily by this simple process:
+1. Find an equality test (== or !=) and replace it with its truth. 
+2. Findeachand/orinsideparenthesesandsolvethosefirst. 
+3. Findeachnotandinvertit.
+4. Findanyremainingand/orandsolveit.
+5. When you are done you should have True or False. 
+  I will demonstrate with a variation on #20:
+  3 != 4 and not (”testing” != ”test” or ”Python” == ”Python”)
+  Here’s me going through each of the steps and showing you the translation until I’ve boiled it down to a single result:
+  1. Solve each equality test:
+  3 != 4 is True: True and not ("testing" != "test" or "Python" == "Python") "testing" != "test" is True: True and not (True or "Python" == "Python") "Python" == "Python": True and not (True or True)
+2. Find each and/or in parentheses():
+(True or True) is True: True and not (True)
+3. Findeachnotandinvertit:
+not (True) is False: True and False
+4. Findanyremainingand/orandsolvethem: True and False is False
+With that we’re done and know the result is False.
+WARNING! The more complicated ones may seem very hard at first. You should be able to take a good first stab at solving them, but do not get discouraged. I’m just getting you primed for more of these ”logic gymnastics” so that later cool stuff is much easier. Just stick with it, and keep track of what you get wrong, but do not worry that it’s not getting in your head quite yet. It’ll come.
+
+
+EX.20
+
+>>> True and True
+True
+>>1 == 1 and 2 == 2
+True
+
+x = True
+y = False
+
+# Output: x and y is False
+print('x and y is',x and y)
+
+# Output: x or y is True
+print('x or y is',x or y)
+
+# Output: not x is False
+print('not x is',not x)
+
+
+Identity operators
+is and is not are the identity operators in Python. They are used to check if two values (or variables) are located on the same part of the memory. Two variables that are equal does not imply that they are identical.
+
+Identity operators in Python
+Operator	Meaning	Example
+is	True if the operands are identical (refer to the same object)	x is True
+is not	True if the operands are not identical (do not refer to the same object)	x is not True
+
+Terminal Ex:
+>>> x = 5
+>>> type(x) is int
+True
+>>> type(x) is not float
+True
+>>> y = 3.23
+>>> type(y) is not float
+False
+>>> type(y) is int
+False
+
+Terminal Ex:
+x = 20
+y = 20
+if ( x is y ): 
+	print("x & y  SAME identity")
+y=30
+if ( x is not y ):
+	print("x & y have DIFFERENT identity")
+  
+Membership operators
+in and not in are the membership operators in Python. 
+They are used to test whether a value or variable is found in a sequence (string, list, tuple, set and dictionary).
+In a dictionary we can only test for presence of key, not the value.
+
+Operator- Meaning
+  Example
+in	- True 
+  if value/variable is found in the sequence	5 in x
+not in	- True 
+  if value/variable is not found in the sequence	5 not in x
+
+
+ 
+ #Arithmetic Operators
+x= 4	
+y= 5
+print x + y
+
+#Comparison Operators
+x = 4
+y = 5
+print('x > y  is',x>y)
+
+#Assignment Operators
+num1 = 4
+num2 = 5
+print ("Line 1 - Value of num1 : ", num1)
+print ("Line 2 - Value of num2 : ", num2)
+
+#compound assignment operator
+num1 = 4
+num2 = 5
+res = num1 + num2
+res += num1
+print ("Line 1 - Result of + is ", res)
+
+#Logical Operators
+a = True
+b = False
+print('a and b is',a and b)
+print('a or b is',a or b)
+print('not a is',not a)
+
+#Membership Operators
+x = 4
+y = 8
+list = [1, 2, 3, 4, 5 ];
+if ( x in list ):
+   print "Line 1 - x is available in the given list"
+else:
+   print "Line 1 - x is not available in the given list"
+if ( y not in list ):
+   print "Line 2 - y is not available in the given list"
+else:
+   print "Line 2 - y is available in the given list"
+
+#Identity Operators
+x = 20
+y = 20
+if ( x is y ):
+	print "x & y  SAME identity"
+y=30
+if ( x is not y ):
+	print "x & y have DIFFERENT identity"
+
+#Operator precedence
+v = 4
+w = 5
+x = 8
+y = 2
+z = 0
+z = (v+w) * x / y;   
+print "Value of (v+w) * x/ y is ",  z
+
+
+
+
+
