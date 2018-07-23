@@ -1,7 +1,12 @@
 import sys
 
-movie_ids = []
-uids= []
+user_list = []
+movie_list= []
+
+uniq_user_id = {}
+uniq_movie_id = {}
+
+
 
 def read_bytes(file_obj):
 	str = file_obj.read(10)
@@ -18,25 +23,24 @@ def read_lines_for(file_obj):
 	for line in lines:
 		print(type(line))
 		print (line)
-		words = line.split("\t")
-		print(words)
-		words [3] = words[3].replace("\n", '')
-		print(words)
-		uids.append (words[0])
+		process_data(i)
 		i += 1
 		if i ==10:
 			break
 		 
 
-def process_data():
+def process_data(i):
 #todo, this processes each line and cleans
+	string_list = line.split("\t")
+        string_list [3] = string_list[3].replace("\n", '')
+        build_list(string_list, i)
+	return 
 
 def convert_time_stamp():
-	return datetime
+	return ''
 
 def uniq_id_analysis():
-
-	returns uid, mid
+	return uid, mid
 
 
 
@@ -44,7 +48,7 @@ def ratings_analysis():
 	return 
 
 def top_ratings_movies ():
-
+	return
 
 
 def main(path):
