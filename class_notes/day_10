@@ -131,6 +131,45 @@ What does this do?
 dict3  = {**dict1, **dict2}
 
 
+JSON: 
+JSON supports primitive types, like strings and numbers, as well as nested lists and objects.
+Json encoding:serialization 
+Json Decoding:de-serialization
+
+json dumps and json dump
+-dumps  to string
+-dump to file
+
+Terminal EX:
+
+json_string = '{"first_name": "Guido", "last_name":"Rossum"}'
+
+import json
+parsed_json = json.loads(json_string)
+print(parsed_json['first_name'])
+
+d = {
+    'first_name': 'Guido',
+    'second_name': 'Rossum',
+    'titles': ['BDFL', 'Developer'],
+}
+print(json.dumps(d))
+
+data = {
+    "president": {
+        "name": "Zaphod Beeblebrox",
+        "species": "Betelgeusian"
+    }
+}
 
 
+# Dump to a  String 
+json_str = json.dump(data)
+
+# Dump to a file 
+with open("data_file.json", "w") as write_file:
+    json.dump(data, write_file)
+
+python json--
+https://docs.python.org/2/library/json.html
 
