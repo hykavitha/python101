@@ -1,0 +1,136 @@
+DICT
+more Json 
+XML
+
+
+key value pairs. The value can be accessed by unique key in the dictionary.
+
+Built-in Functions
+
+Dict.cmp(): Compares elements of both dict.
+Dict.len(): Gives the total length of the dictionary.
+Dict.str(): Produces a printable string representation of a dictionary.
+Dict.type(): Returns the type of the passed variable.
+Dict.clear(): Removes all elements of dictionary dict
+Dict.copy(): Returns a shallow copy of dictionary dict
+Dict.fromkeys(): Create a new dictionary with keys from seq and values set to value.
+Dict.get(): For key, returns value or default if key not in dictionary
+Dict.items(): Returns a list of dict’s (key, value) tuple pairs
+Dict.keys(): Returns list of dictionary dict’s keys
+Dict.setdefault(): Set dict[key]=default if key is not already in dict
+Dict.update(): Adds dictionary dict2’s key-values pairs to dict
+Dict.values(): Returns list of dictionary dict’s values
+
+ 
+
+# Create a new dictionary 
+d = dict() # or d = {}
+ 
+# Add a key - value pairs to dictionary
+d['xyz'] = 123
+d['abc'] = 345
+ 
+# print the whole dictionary
+print(d)
+ 
+# print only the keys
+print(d.keys())
+ 
+# print only values
+print(d.values())
+ 
+# iterate over dictionary 
+for i in d :
+    print("{} {}".format(i, d[i]))
+ 
+# another method of iteration
+for index, value in enumerate(d):
+    print (index, value , d[value])
+ 
+# check if key exist
+print('xyz' in d)
+ 
+# delete the key-value pair
+del d['xyz']
+ 
+# check again 
+print("xyz" in d)
+
+
+
+# clear() and copy()
+ 
+# Initializing dictionary
+dic1 = { 'Name' : 'Nandini', 'Age' : 19 }
+ 
+# dic3 can be created or not , thats fine
+dic3 = {}
+ 
+# using copy() to make shallow copy of dictionary
+dic3 = dic1.copy()
+ 
+# printing new dictionary
+print ("The new copied dictionary is : ")
+print (dic3.items())
+ 
+# clearing the dictionary
+dic1.clear()
+# deleting a dictionary is dealocating the variable d 
+ 
+# printing cleared dictionary
+print ("The contents of deleted dictionary is : ",end="")
+print (dic1.items())
+
+
+Handling missing keys: 
+
+d = { 'a' : 1 , 'b' : 2 }
+
+call 
+d['c']  --> errors
+
+get(key,def_val) method is useful when we have to check for the key.
+If the key is present, value associated with the key is printed, 
+else the def_value passed in arguments is returned.
+
+You can call default user defined function 
+person_1 = { 'name': 'Arun', 'age': 35 }
+person_2 = { 'name': 'Anjali', 'age': 5 }
+
+result = person_1.get('age', default_answer())
+result = person_2.get('age', default_answer())
+
+def default_answer():
+  print("called default answer")
+  return 100
+
+# if you want to use dict like a stack then use pop
+multiple ways to do the same: 
+#way1
+result = g.pop('age', False) or default_answer()
+#way2
+if 'age' in g:
+    result = g['age']
+else:
+    result = default_answer()
+ 
+ #way3
+ 
+    try:
+    result = g.pop('age')
+except KeyError:
+    result = default_answer()
+
+Lets look at some collections on dict 
+https://docs.python.org/3/library/collections.html#collections.defaultdict
+
+
+HW: 
+Use update on same keys and different keys and note teh difference
+What does this do?
+dict3  = {**dict1, **dict2}
+
+
+
+
+
