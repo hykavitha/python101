@@ -1,0 +1,9 @@
+Sets in python : 
+ set1 = {10, 10, 20, 50, 30, 2, 2, 78, 87, 90, 20, 78}
+ from collections import OrderedDict
+1. Convert array into dictionary data structure using 
+OrderedDict.fromkeys(iterable) function, 
+it converts any iterable into dictionary having elements as Key in the same order they appeared in array.
+Now iterate through complete dictionary and print keys.
+
+https://snakify.org/en/lessons/sets/
