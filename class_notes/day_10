@@ -113,8 +113,14 @@ Out[65]:
  'status': 'ok',
  'totalResults': 2}
 
-
-
+get titles from above data
+for i in news_data:
+    #print (i)
+    #print(news_data[i])
+    if i == 'articles':
+        print(i)
+        for j in news_data['articles'] : 
+            print(j['title'])
 
 # clear() and copy()
  
