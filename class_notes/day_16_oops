@@ -1,2 +1,277 @@
+REfresh 
+http://openbookproject.net/thinkcs/python/english3e/classes_and_objects_I.html
+
 Python Inheritance
 Inheritance enable us to define a class that takes all the functionality from parent class and allows us to add more.
+
+It refers to defining a new class with little or no modification to an existing class. 
+The new class is called derived (or child) class and the one from which it inherits is called the base (or parent) class.
+
+Derived class:
+Derived class inherits features from the base class, adding new features to it. This results into re-usability of code.
+
+Python Inheritance Syntax
+
+class BaseClass:
+  Body of base class
+class DerivedClass(BaseClass):
+  Body of derived class
+  
+Example of Inheritance in Python
+To demonstrate the use of inheritance, let us take an example.
+
+A polygon is a closed figure with 3 or more sides. Say, we have a class called Polygon defined as follows.
+This class has data attributes to store the number of sides, n and magnitude of each side as a list, sides.
+inputSides() takes in magnitude of each side and similarly, 
+dispSides() will display these properly.
+
+class Polygon:
+    def __init__(self, no_of_sides):
+        self.n = no_of_sides
+        self.sides = [0 for i in range(no_of_sides)]
+
+    def inputSides(self):
+        self.sides = [float(input("Enter side "+str(i+1)+" : ")) for i in range(self.n)]
+
+    def dispSides(self):
+        for i in range(self.n):
+            print("Side",i+1,"is",self.sides[i])
+  
+  
+Derived Calss 
+A triangle is a polygon with 3 sides. S
+o, we can create a class called Triangle which inherits from Polygon. 
+This makes all the attributes available in class Polygon readily available in Triangle. 
+We don't need to define them again (code re-usability). Triangle is defined as follows.
+
+class Triangle(Polygon):
+    def __init__(self):
+        Polygon.__init__(self,3)
+
+    def findArea(self):
+        a, b, c = self.sides
+        # calculate the semi-perimeter
+        s = (a + b + c) / 2
+        area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+        print('The area of the triangle is %0.2f' %area)
+        
+        
+  t = Triangle()
+  t.inputSides()
+  t.dispSides()
+  t.findArea()
+  
+  
+We can see that, even though we did not define methods like inputSides() or dispSides() for class Triangle, 
+we were able to use them.
+
+If an attribute is not found in the class, search continues to the base class. 
+This repeats recursively, if the base class is itself derived from other classes.
+
+
+Method Overriding in Python
+In the above example, notice that __init__() method was defined in both classes, 
+Triangle as well Polygon. When this happens, the method in the derived class overrides that in the base class. 
+This is to say, __init__() in Triangle gets preference over the same in Polygon.
+
+Generally when overriding a base method, we tend to extend the definition rather than simply replace it. 
+The same is being done by calling the method in base class from the one in derived class
+(calling Polygon.__init__() from __init__() in Triangle).
+A better option would be to use the built-in function super(). 
+So, super().__init__(3) is equivalent to Polygon.__init__(self,3) and is preferred.
+You can learn more about the super() function in Python.
+
+Two built-in functions isinstance() and issubclass() are used to check inheritances.
+Function isinstance() returns True if the object is an instance of the class or other classes derived from it.
+Each and every class in Python inherits from the base class object.
+
+SUPER
+https://rhettinger.wordpress.com/2011/05/26/super-considered-super/
+
+>>> isinstance(t,Triangle)
+True
+>>> isinstance(t,Polygon)
+True
+>>> isinstance(t,int)
+False
+>>> isinstance(t,object)
+True
+>>> issubclass(Polygon,Triangle)
+False
+>>> issubclass(Triangle,Polygon)
+True
+>>> issubclass(bool,int)
+True
+
+Multiple Inheritance
+a class can be derived from more than one base classes in Python. This is called multiple inheritance.
+In multiple inheritance, the features of all the base classes are inherited into the derived class. The syntax for multiple inheritance is similar to single inheritance.
+
+Example
+class Base1:
+    pass
+
+class Base2:
+    pass
+
+class MultiDerived(Base1, Base2):
+
+
+Multilevel Inheritance in Python
+On the other hand, we can also inherit form a derived class. This is called multilevel inheritance. It can be of any depth in Python.
+
+In multilevel inheritance, features of the base class and the derived class is inherited into the new derived class.
+
+In the multiple inheritance scenario, any specified attribute is searched first in the current class.
+If not found, the search continues into parent classes in depth-first, 
+left-right fashion without searching same class twice.
+An example with corresponding visualization is given below.
+
+class Base:
+    pass
+
+class Derived1(Base):
+    pass
+
+class Derived2(Derived1):
+
+
+
+EX: https://cdn.programiz.com/sites/tutorial2program/files/MRO.jpg
+class X: pass
+class Y: pass
+class Z: pass
+
+class A(X,Y): pass
+class B(Y,Z): pass
+
+class M(B,A,Z): pass
+
+# Output:
+# [<class '__main__.M'>, <class '__main__.B'>,
+# <class '__main__.A'>, <class '__main__.X'>,
+# <class '__main__.Y'>, <class '__main__.Z'>,
+# <class 'object'>]
+
+print(M.mro())
+
+    pass
+    
+ 
+    pass
+
+Difference between Abstraction and Encapsulation
+
+Abstraction is a mechanism which represent the essential features without including implementation details.
+
+Encapsulation: — Information hiding.
+Abstraction: — Implementation hiding.
+
+
+
+
+Encapsulation
+Using OOP in Python, we can restrict access to methods and variables. 
+This prevent data from direct modification which is called encapsulation. 
+In Python, we denote private attribute using underscore as prefix i.e single “ _ “ or double “ __“.
+
+Data Encapsulation in Python
+class Computer:
+
+    def __init__(self):
+        self.__maxprice = 900
+
+    def sell(self):
+        print("Selling Price: {}".format(self.__maxprice))
+
+    def setMaxPrice(self, price):
+        self.__maxprice = price
+
+c = Computer()
+c.sell()
+
+# change the price
+c.__maxprice = 1000
+c.sell()
+
+# using setter function
+c.setMaxPrice(1000)
+c.sell()
+
+
+Polymorphism
+Polymorphism is an ability (in OOP) to use common interface for multiple form (data types).
+
+Suppose, we need to color a shape, there are multiple shape option (rectangle, square, circle). 
+However we could use same method to color any shape. This concept is called Polymorphism.
+
+class Parrot:
+
+    def fly(self):
+        print("Parrot can fly")
+    
+    def swim(self):
+        print("Parrot can't swim")
+
+class Penguin:
+
+    def fly(self):
+        print("Penguin can't fly")
+    
+    def swim(self):
+        print("Penguin can swim")
+
+# common interface
+def flying_test(bird):
+    bird.fly()
+
+#instantiate objects
+blu = Parrot()
+peggy = Penguin()
+
+# passing the object
+flying_test(blu)
+flying_test(peggy)
+
+
+    
+Overloading the + Operator in Python
+To overload the + sign, we will need to implement __add__() function in the class. With great power comes great responsibility. We can do whatever we like, inside this function. But it is sensible to return a Point object of the coordinate sum.
+
+
+
+>>> p1 = Point(2,3)
+>>> p2 = Point(-1,2)
+>>> print(p1 + p2)
+(1,5)
+What actually happens is that, when you do p1 + p2, Python will call p1.__add__(p2) which in turn is Point.__add__(p1,p2). Similarly, we can overload other operators as well. The special function that we need to implement is tabulated below.
+
+Operator Overloading Special Functions in Python
+Operator	Expression	Internally
+Addition	p1 + p2	p1.__add__(p2)
+Subtraction	p1 - p2	p1.__sub__(p2)
+Multiplication	p1 * p2	p1.__mul__(p2)
+Power	p1 ** p2	p1.__pow__(p2)
+Division	p1 / p2	p1.__truediv__(p2)
+Floor Division	p1 // p2	p1.__floordiv__(p2)
+Remainder (modulo)	p1 % p2	p1.__mod__(p2)
+Bitwise Left Shift	p1 << p2	p1.__lshift__(p2)
+Bitwise Right Shift	p1 >> p2	p1.__rshift__(p2)
+Bitwise AND	p1 & p2	p1.__and__(p2)
+Bitwise OR	p1 | p2	p1.__or__(p2)
+Bitwise XOR	p1 ^ p2	p1.__xor__(p2)
+Bitwise NOT	~p1	p1.__invert__()
+ecial functions that we need to implement, to overload other comparison operators are tabulated below.
+
+Comparision Operator Overloading in Python
+Operator	Expression	Internally
+Less than	p1 < p2	p1.__lt__(p2)
+Less than or equal to	p1 <= p2	p1.__le__(p2)
+Equal to
+
+p1 == p2	p1.__eq__(p2)
+Not equal to	p1 != p2	p1.__ne__(p2)
+Greater than	p1 > p2	p1.__gt__(p2)
+Greater than or equal to	p1 >= p2	p1.__ge__(p2)
+
+
