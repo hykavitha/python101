@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Sample "Hello, World" Application</title>
+  </head>
+  <body bgcolor=white>
+
+    <table border="0" cellpadding="10">
+      <tr>
+        <td>
+        	{% if greeting %}
+		I just wanted to say
+	<em style="color: green; font-size: 2em;">{{ greeting }}</em>.
+	{% else %}
+    	<em>Hello</em>, world!
+	{% endif %}
+
+	</td>
+        <td>
+          <h1>Sample "Hello, World" Application</h1>
+        </td>
+      </tr>
+    </table>
+
+    <p>This is the home page for the HelloWorld Web application. </p>
+    <p>To prove that they work, you can execute either of the following links:
+    <ul>
+      <li>To a <a href="login.html">Login Page</a>.
+      <li>To a <a href="hello"> HelLo Message </a>.
+    </ul>
+
+  </body>
+</html>
+
