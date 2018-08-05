@@ -1,0 +1,162 @@
+Python Classes/Objects
+  Python is an object oriented programming language.
+  Almost everything in Python is an object, with its properties and methods.
+  A Class is like an object constructor, or a "blueprint" for creating objects.
+
+How to do define a simple class?
+
+Class
+Class can be defined as a collection of objects. It is a logical entity that has some specific attributes and methods. For example: if you have an employee class then it should contain an attribute and method i.e. an email id, name, age, salary etc.
+
+Syntax:
+
+class ClassName:  
+    <statement-1>  
+    .  
+    .  
+    .  
+    <statement-N>  
+    
+   
+Major principles of object-oriented programming system are given below
+
+Object
+Class
+Method
+Inheritance
+Polymorphism
+Data Abstraction
+Encapsulation
+
+Object
+Object is an entity that has state and behavior. It may be anything. 
+It may be physical and logical. For example: mouse, keyboard, chair, table, pen etc.
+
+
+Method
+Method is a function that is associated with an object. 
+
+
+Inheritance
+It specifies that one object acquires all the properties and behaviors of parent object. 
+By using inheritance you can define a new class with a little or no changes to the existing class. The new class is known as derived class or child class and from which it inherits the properties is called base class or parent class.
+It provides re-usability of the code.
+
+
+Polymorphism
+Polymorphism is made by two words "poly" and "morphs". 
+Poly means many and Morphs means form, shape. 
+It defines that one task can be performed in different ways.
+For example: You have a class animal and all animals talk. 
+But they talk differently. Here, the "talk" behavior is polymorphic 
+in the sense and totally depends on the animal. So, the abstract "animal" 
+concept does not actually "talk", but specific animals (like dogs and cats) 
+have a concrete implementation of the action "talk".
+
+
+Encapsulation 
+Encapsulation is also the feature of object-oriented programming. 
+It is used to restrict access to methods and variables.
+In encapsulation, code and data are wrapped together within a single unit 
+from being modified by accident.
+
+https://en.wikipedia.org/wiki/Name_mangling
+
+Data Abstraction
+Data abstraction and encapsulation both are often used as synonyms. 
+Both are nearly synonym because data abstraction is achieved through encapsulation.
+Abstraction is used to hide internal details and show only functionalities. 
+Abstracting something means to give names to things, so that the name captures 
+the core of what a function or a whole program does.
+
+
+Class - How to define Class 
+
+Class ClassName:
+  <Statement 1>
+  <Statement 2>
+  :
+  :
+  <Statement n>
+
+class MyClass:
+    """ hey this is my first class """
+    def fun1():
+      print('var value is {} ', self.var)
+      print("hello world from myclass")
+ 
+ ---double underscore (__). For example: __doc__ attribute. It is used to fetch the docstring of that class.
+   
+ When we define a class, a new class object is created with the same class name. 
+ This new class object provides a facility to access the different attributes as well as
+ to instantiate new objects of that class.  
+ 
+ Create an Object in Python
+We can create new object instances of the classes. The procedure to create an object is similar to a function call.
+You can access MyClass by creating an object 
+    p1 = MyClass()
+    print(p1.var)
+    p1.func1()
+
+
+__init__()
+__init__ is called when the instance is created. 
+
+class A:
+    def __init__(self):
+        self.x = 'Hello'
+
+    def method_a(self, foo):
+        print (self.x + ' ' + foo)
+
+class B:
+    x = 'Hello'
+    def method_b(self,foo):
+        print (self.x + ' ' + foo)
+    
+    Does this mean that x in class B is established before instantiation?
+    yes!!!
+    
+    
+Yes, it's a class attribute (it is shared between instances).
+While in class A it's an instance attribute. It just happens that strings are immutable, thus there is no real difference in your scenario (except that class B uses less memory,
+because it defines only one string for all instances).
+Look at this example :
+   
+   lst from A is only accessible through an instance (self required).
+   lst from B is a static variable. You can access this variable by classname and same across all the objects
+class A(object):
+    def __init__(self):
+        self.lst = []
+
+class B(object):
+    lst = []
+    
+  
+>>> x = B()
+>>> y = B()
+>>> x.lst.append(1)
+>>> y.lst.append(2)
+>>> x.lst
+[1, 2]
+>>> x.lst is y.lst
+True
+
+
+>>> x = A()
+>>> y = A()
+>>> x.lst.append(1)
+>>> y.lst.append(2)
+>>> x.lst
+[1]
+>>> x.lst is y.lst
+False
+
+
+
+Simple Example:
+EX_43_class.py 
+
+   
+   https://pythontips.com/2013/08/07/the-self-variable-in-python-explained/
+   

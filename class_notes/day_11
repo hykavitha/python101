@@ -1,0 +1,209 @@
+Sets in python 
+Bitwise operators
+
+
+Bitwise operators
+Bitwise operators act on operands as if they were string of binary digits. It operates bit by bit, hence the name.
+USES: 
+encryption, 
+compression 
+byte manipulation
+
+Bitwise operators in Python
+Operator	Meaning	Example
+&	Bitwise AND	x & y = 0 (0000 0000)
+|	Bitwise OR	x | y = 14 (0000 1110)
+~	Bitwise NOT	~x = -11 (1111 0101)
+^	Bitwise XOR	x ^ y = 14 (0000 1110)
+>>	Bitwise right shift	x>> 2 = 2 (0000 0010)
+<<	Bitwise left shift	x<< 2 = 40 (0010 1000)
+
+Let’s take two numbers- 5 and 7. We’ll show you their binary equivalents using the function bin().
+ Terminal EX:
+ 
+ AND (&)
+ >>> bin(5)
+ ‘0b101’
+ >>> bin(7)
+ ‘0b111’
+ Now let’s try applying ‘and’ and ‘&’ to 5 and 7.
+ >>> 5 and 7
+ 7
+ >>> 5&7
+ 5
+ >>>  1.0 & 1.0 
+ boom!
+ 
+ Bitwise OR (|)
+ >>>6|1
+ >>>0b110|0b001
+ 
+ Bitwise XOR (^) 
+ >>>6^6
+ >>>6^0
+ >>>0b110^0b011
+ 
+ Bitwise 1’s Complement (~)
+ >>>~2
+ >>>bin(~5)
+ 
+ Bitwise Left-Shift Operator (<<)
+  True has an equivalent integer value of 1. If we shift it by two places to the left, we get 100. This is binary for 4.
+  In the table below: Let x = 10 (0000 1010 in binary) and y = 4 (0000 0100 in binary)
+
+get integer type with base 2
+>>>bin(10) 
+Out[174]: '0b1010'
+>>>int('1010', 2) 
+
+Interview Questions on bitwise operators 
+1. Do multiplication using bit wise operators
+ x*9  = 9x
+ (x <<3) + X = 9x
+
+2. Set right most bit: 2 ways
+x ^ ( x & (x-1)) 
+x & (-x) 
+ x = 10 = (1010)2
+ (-x) is the two's complement of x
+ (-x) will be equal to one’s complement of x plus 1
+ so  (-x) = 0101 + 1 = (0110)2
+ x & (-x) = (1010)2 & (0110)2 = (0010)2
+
+3.  x | (1 << n) : Returns the number x with the nth bit set.
+
+Creativity
+https://snook.ca/archives/javascript/creative-use-bitwise-operators
+
+Hacker rank as good SET notes,lets see this and implement some 
+https://www.hackerearth.com/practice/notes/bit-manipulation/
+
+Sets: unordered collections of unique elements.
+Why sets??
+ membership testing, 
+ removing duplicates from a sequence, 
+ computing standard math operations on sets such as 
+    intersection, 
+    union, 
+    difference, 
+    symmetric difference.
+
+class sets.Set([iterable])
+
+#dict can have uniq keys so as set
+set_dict = {"apple", "banana", "cherry"}
+print(set_dict)
+
+# use set with set constructor
+Lets dig through sets class in the class... 
+https://docs.python.org/2/library/sets.html
+
+# Python program to demonstrate differences
+# between normal and frozen set
+ 
+# Same as {"a", "b","c"}
+normal_set = set(["a", "b","c"])
+ 
+# Adding an element to normal set is fine
+normal_set.add("d")
+ 
+print("Normal Set")
+print(normal_set)
+ 
+# A frozen set
+frozen_set = frozenset(["e", "f", "g"])
+ 
+print("Frozen Set")
+print(frozen_set)
+ 
+# Uncommenting below line would cause error as
+# we are trying to add element to a frozen set
+# frozen_set.add("h")
+
+
+Operation	
+len(s)	 	
+ number of elements in set s (cardinality)
+x in s	 	
+ test x for membership in s
+x not in s	 	
+ test x for non-membership in s
+s.issubset(t)	
+ s <= t	test whether every element in s is in t
+s.issuperset(t)	
+ s >= t	test whether every element in t is in s
+s.union(t)	
+ s | t	new set with elements from both s and t
+s.intersection(t)	
+ s & t	new set with elements common to s and t
+s.difference(t)	
+ s - t	new set with elements in s but not in t
+s.symmetric_difference(t)	
+ s ^ t	new set with elements in either s or t but not both
+s.copy()	 	
+ new set with a shallow copy of s
+
+s.update(t)	
+ s |= t	return set s with elements added from t
+s.intersection_update(t)	
+ s &= t	return set s keeping only elements also found in t
+s.difference_update(t)	
+ s -= t	return set s after removing elements found in t
+s.symmetric_difference_update(t)	
+ s ^= t	return set s with elements from s or t but not both
+s.add(x)	 	
+ add element x to set s
+s.remove(x)	 	
+ remove x from set s; raises KeyError if not present
+s.discard(x)	 	
+ removes x from set s if present
+s.pop()	 	
+ remove and return an arbitrary element from s; raises KeyError if empty
+s.clear()	 	
+remove all elements from set s
+
+Lets go n do some examples 
+
+Python Data Structures – Lists, Tuples, Sets, Dictionaries
+Summary
+https://data-flair.training/blogs/python-data-structures-tutorial/
+
+
+ set1 = {10, 10, 20, 50, 30, 2, 2, 78, 87, 90, 20, 78}
+ from collections import OrderedDict
+ 
+ Convert array into dictionary data structure using 
+OrderedDict.fromkeys(iterable) function, 
+it converts any iterable into dictionary having elements 
+as Key in the same order they appeared in array.
+Now iterate through complete dictionary and print keys.
+
+https://snakify.org/en/lessons/sets/
+
+HW:
+1. Generate all the possible subsets of a set ?
+Consider a set A of 3 elements.
+A = {a, b, c}
+
+Now, we need 3 bits, one bit for each element.
+1 represent that the corresponding element is present in the subset, 
+whereas 0 represent the corresponding element is not in the subset. 
+Let’s write all the possible combination of these 3 bits.
+
+0 = (000)2 = {}
+1 = (001)2 = {c}
+2 = (010)2 = {b}
+3 = (011)2 = {b, c}
+4 = (100)2 = {a}
+5 = (101)2 = {a, c}
+6 = (110)2 = {a, b}
+7 = (111)2 = {a, b, c}
+
+Pseudo Code:
+
+possibleSubsets(A, N):
+    for i = 0 to 2^N:
+        for j = 0 to N:
+            if jth bit is set in i:
+                print A[j]
+        print ‘\n’
