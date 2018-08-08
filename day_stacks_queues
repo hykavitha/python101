@@ -31,26 +31,7 @@ For example, undo operations in editors are like popping a code change that was 
 
 For example, a stack comes in handy when checking if an operation “(5 + 6) + ((7 * 9) + 9) + 10)” is a valid syntax (see sample problem 3 for details). Another use case is to keep track of recursions in a code. Each call to the recursive function is pushed onto the stack so that it can be executed once lower recursions are done with their execution.
 
-Stacks in Python
-class Stack:
-    def __init__(self):
-        self.stack = []
-    def pop(self):
-        if self.is_empty():
-            return None
-        else:
-            return self.stack.pop()
-    def push(self,val):
-        return self.stack.append(val)
-    def peak(self):
-        if self.is_empty():
-            return None
-        else:
-            return self.stack[-1]
-    def size(self):
-        return len(self.stack)
-    def is_empty(self):
-        return self.size() == 0
+
 I hope this is intuitive after reading the explanation above.
 
 What are queues?
@@ -75,23 +56,6 @@ When are queues useful?
 Queues are used whenever you want to process things one at a time as they come in.
 
 Some examples are, uploading bunch of images, printing multiple documents, and processing thousands of requests to a web server.
-
-Queues in Python
-class Queue:
-    def __init__(self):
-        self.queue = []
-    def enqueue(self,val):
-        self.queue.insert(0,val)
-    def dequeue(self):
-        if self.is_empty():
-            return None
-        else:
-            return self.queue.pop()
-    def size(self):
-        return len(self.queue)
-    def is_empty(self):
-        return self.size() == 0
-Again, the implementation should be easy to understand (let me know if you have any questions).
 
 Some linked stack/queue challenges
 Given a string of brackets, determine if the string is balanced
