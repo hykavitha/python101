@@ -433,5 +433,7 @@ In fact, if you can use = to name something, you can usually pass it to a functi
 
 
 
-
+HW: 
+read at how json to and from conversion happens
+https://realpython.com/python-json/
 
