@@ -7,5 +7,12 @@ arguments = sys.argv[1:]
 count = len(arguments)
 print(arguments)
 
+num = int(sys.argv[1]) 
 
-print("this is Hw_1.py")
+if num > 0:
+	print("positive")
+elif  num < 0 : 
+	print("negative")
+else:
+	print("00000")
+ 
