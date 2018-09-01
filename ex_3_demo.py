@@ -1,3 +1,11 @@
+'''
+input: "."*2
+output:  '..'
+'''
+  print('str[0] = ', str[0])
+
+
+
 print("I will now count my chickens:")
 
 print("Hens", 25 + 30 / 6)

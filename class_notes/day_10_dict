@@ -56,40 +56,63 @@ del d['xyz']
 # check again 
 print("xyz" in d)
 
+Update function:
+
+In [100]: d = {1: "one", 2: "three"}
+     ...: d1 = {2: "two"}
+     ...: 
+
+In [101]: d
+Out[101]: {1: 'one', 2: 'three'}
+
+In [102]: d1
+Out[102]: {2: 'two'}
+
+In [103]: d.update(d1) 
+
+In [104]: d
+Out[104]: {1: 'one', 2: 'two'}
+
+In [105]: d[2]
+Out[105]: 'two'
+
+In [106]: type(d[2])
+Out[106]: str
+
+In [107]: d = {'x': 2}
+     ...: 
+     ...: d.update(y = 3, z = 0)
+     ...: print(d)
+     ...: 
+
+
+
 Terminal Ex:
 ## complicated dictionary EX
 
-In [55]: dict1= { 
-    ...:     "source": {
-    ...:                 "id": None,
-    ...:                 "name": "Newsbtc.com"
-    ...:                } , "author": "Kif Leswing, Business Insider",
-    ...: "title": "Hackers Have Video of You Watching Porn? Here's How to Avoid This New Scam Threat",
-    ...: "description": "There's a new scam going around that would terrify most people if it ever lande
-    ...: d in their inbox.",
-    ...: "url": "https://www.sciencealert.com/protect-yourself-from-latest-hacked-passwords-and-sextorti
-    ...: on-email-scam",
-    ...: "urlToImage": "https://www.sciencealert.com/images/2018-07/processed/ScammersClaimingWatchingYo
-    ...: uWatchPorn_1024.jpg",
-    ...: "publishedAt": "2018-07-25T06:51:07Z"
-    ...: }
+dict1= {'author': 'Kif Leswing, Business Insider',
+ 'description': "There's a new scam going around that would terrify most people if it ever landed in their inbox.",
+ 'publishedAt': '2018-07-25T06:51:07Z',
+ 'source': {'id': None, 'name': 'Newsbtc.com'},
+ 'title': "Hackers Have Video of You Watching Porn? Here's How to Avoid This New Scam Threat",
+ 'url': 'https://www.sciencealert.com/protect-yourself-from-latest-hacked-passwords-and-sextortion-email-scam',
+ 'urlToImage': 'https://www.sciencealert.com/images/2018-07/processed/ScammersClaimingWatchingYouWatchPorn_1024.jpg'}
+
+
+
+     
     
-In [60]: dict2 = {
-    ...: "source": {
-    ...: "id": None,
-    ...: "name": "Newsbtc.com"
-    ...: },
-    ...: "author": "Aayush Jindal",
-    ...: "title": "Ripple Price Analysis: XRP/USD Sighting Break Above $0.4700",
-    ...: "description": "Key Highlights Ripple price is slowly recovering and is currently trading above
-    ...:  $0.4500 against the US dollar. There is a major bearish trend line in place with resistance at
-    ...:  $0.4680 on the hourly chart of the XRP/USD pair (data source from Kraken). The pair …",
-    ...: "url": "https://www.newsbtc.com/2018/07/25/ripple-price-analysis-xrp-usd-sighting-break-above-0
-    ...: -4700/",
-    ...: "urlToImage": "https://s3.amazonaws.com/main-newsbtc-images/2018/04/17064027/techanalysis-xrp.j
-    ...: pg",
-    ...: "publishedAt": "2018-07-25T06:30:16Z"
-    ...: }
+dict2 = {'author': 'Aayush Jindal',
+ 'description': 'Key Highlights Ripple price is slowly recovering and is currently trading above$0.4500 against the US dollar. There is a major bearish trend line in place with resistance at$0.4680 on the hourly chart of the XRP/USD pair (data source from Kraken). The pair …',
+ 'publishedAt': '2018-07-25T06:30:16Z',
+ 'source': {'id': None, 'name': 'Newsbtc.com'},
+ 'title': 'Ripple Price Analysis: XRP/USD Sighting Break Above $0.4700',
+ 'url': 'https://www.newsbtc.com/2018/07/25/ripple-price-analysis-xrp-usd-sighting-break-above-0-4700/',
+ 'urlToImage': 'https://s3.amazonaws.com/main-newsbtc-images/2018/04/17064027/techanalysis-xrp.jpg'}
+
+
+
+     
 
 
 In [64]: news_data = {'status': 'ok', 'totalResults' : 2, 'articles' : [dict1, dict2]} 
