@@ -1,0 +1,47 @@
+using classes and objects
+implement DATA STRUCTURES using lists. 
+
+1. stacks :
+  1.1 LIFO Princliple 
+  1.2 pop
+  1.3 push
+  1.4 peek
+  1.5 remove
+  1.6 isEMpty
+2. queues
+  2.1 FIFO Principle
+  2.2 get - get the FO item in teh queue 
+  2.3 enqueue - add
+  2.4 deque - remove
+  2.5 remove - remives from teh location
+  
+  
+  
+  ms_2.py
+  
+    class Stack
+    func
+    class queue
+    func
+
+  main():
+  take sysrags to run stack or queue  
+  if sys.argv[1] == 'stack':
+    s_obj = stack()
+    no more arguemts - > it shoudl say, cant do stack ope
+    for loop goes from 3rd elen=ment to the length of teh inputs  :
+      s_obj.push()
+    for loop until teh stack is empty:
+      pop() - > print out the obj as well as the tos 
+  
+  if == 'queue':
+    q_obj = queue()
+    same as above 
+  
+  python ms_2.py stack 1 2 3 4 5 6
+    python ms_2.py stack kavya john toby wes noel navy 2.3 23
+    
+    
+    
+  WAP using stacks : try to check whether this is balanced : ((20+3) * 10 / 0-9)
+  
