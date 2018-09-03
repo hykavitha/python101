@@ -1,0 +1,67 @@
+
+read this....
+https://eddmann.com/posts/depth-first-search-and-breadth-first-search-in-python/
+looks how 
+DFS and BFS visualizataion os done
+
+implement DFS and BFS algo for your MS_4
+
+And then 
+look at crawler_subclass.py 
+and implement crawl function
+
+
+q = Queue()
+        q.put((self.root, 0))
+
+        while not q.empty():
+            this_url, depth = q.get()
+
+            # Non-URL-specific filter: Discard anything over depth limit
+            if depth > self.depth_limit:
+                continue
+
+            # Apply URL-based filters.
+            do_not_follow = [f for f in self.pre_visit_filters if not f(this_url)]
+
+            # Special-case depth 0 (starting URL)
+            if depth == 0 and [] != do_not_follow:
+                print >> sys.stderr, "Whoops! Starting URL %s rejected by the following filters:", do_not_follow
+
+            # If no filters failed (that is, all passed), process URL
+            if [] == do_not_follow:
+                try:
+                    self.visited_links.add(this_url)
+                    self.num_followed += 1
+                    page = Fetcher(this_url)
+                    page.fetch()
+                    for link_url in [self._pre_visit_url_condense(l) for l in page.out_links()]:
+                        if link_url not in self.urls_seen:
+                            q.put((link_url, depth + 1))
+                            self.urls_seen.add(link_url)
+
+                        do_not_remember = [f for f in self.out_url_filters if not f(link_url)]
+                        if [] == do_not_remember:
+                            self.num_links += 1
+                            self.urls_remembered.add(link_url)
+                            link = Link(this_url, link_url, "href")
+                            if link not in self.links_remembered:
+                                self.links_remembered.add(link)
+                except Exception, e:
+                    print >> sys.stderr, "ERROR: Can't process url '%s' (%s)" % (this_url, e)
+                    # print format_exc()
+                    
+                    
+
+DO NOT DO THIS YET............
+main
+#take sys args
+#if the deoth is 0,1 or ...? depth_limit
+#print it out
+#crawling - > use taht crawler class functions
+
+crawling functions to implement:
+   do not make a class..... 
+   call a function ->
+   1) Crawler(url, depth_limit)
+
