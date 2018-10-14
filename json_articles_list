@@ -131,8 +131,8 @@
 "urlToImage": "https://www.irishtimes.com/image-creator/?id=1.3571294&origw=1440",
 "publishedAt": "2018-07-25T05:00:00Z"
 },
--{
--"source": {
+{
+"source": {
 "id": None,
 "name": "Business-standard.com"
 },
@@ -191,8 +191,8 @@
 "urlToImage": "https://www.youbrandinc.com/wp-content/uploads/2018/07/Centbee1-1024x1024.jpg",
 "publishedAt": "2018-07-25T04:03:16Z"
 },
--{
--"source": {
+{
+"source": {
 "id": "the-times-of-india",
 "name": "The Times of India"
 },
