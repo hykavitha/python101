@@ -46,7 +46,7 @@ class Crawler(object):
         self.confine_prefix=confine    # Limit search to this prefix
         self.exclude_prefixes=exclude; # URL prefixes NOT to visit
                 
-
+  #do this
         self.urls_seen = set()          # Used to avoid putting duplicates in queue
         self.urls_remembered = set()    # For reporting to user
         self.visited_links= set()       # Used to avoid re-processing a page
@@ -344,16 +344,20 @@ def main():
     url = args[0]
 
     if opts.links:
+        #we got this done
         getLinks(url)
         raise SystemExit, 0
 
+    # MS = take teh depth,
     depth_limit = opts.depth_limit
     confine_prefix=opts.confine
     exclude=opts.exclude
 
     sTime = time.time()
 
+    # MS =
     print >> sys.stderr,  "Crawling %s (Max Depth: %d)" % (url, depth_limit)
+    # MS =
     crawler = Crawler(url, depth_limit, confine_prefix, exclude)
     crawler.crawl()
 
