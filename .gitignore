@@ -1,0 +1,5 @@
+TweetScraper/Data
+__pycache__
+.pyc
+.ipynb_checkpoints
+.xml

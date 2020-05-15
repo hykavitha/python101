@@ -19,10 +19,10 @@ MYSQL_user = 'kavitha'
 MYSQL_pwd = 'root123'
 MYSQL_db = 'web_scraping'
 
-ITEM_PIPELINES = { #000 to 1000
-   # 'tutorial.pipelines.MysqlPipeline': 000,
-    'tutorial.pipelines.CoreymsPipeline' : 600,
-}
+# ITEM_PIPELINES = { #000 to 1000
+#    # 'tutorial.pipelines.MysqlPipeline': 000,
+#     'tutorial.pipelines.CoreymsPipeline' : 600,
+# }
 
 #     config = {
 #         'user': 'kavitha',
